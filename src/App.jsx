@@ -1,6 +1,38 @@
 import "./App.css";
+import { useState, useEffect } from 'react';
+import { getAgents } from "./services/valorantApi";
 
 function App() {
+  
+  //Creating the states that I'll use in this component:
+  const [agents, setAgents] = useState([]);
+  const [featuredAgent, setFeaturedAgent] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  //Using useEffect hook to get API data on component loading:
+  useEffect(
+    () => {
+      async function fetchInitialData() {
+        try {
+          setLoading(true);
+          const agentsData = await getAgents();
+          setAgents(agentsData);
+
+          if(agentsData.length > 0) {
+            setFeaturedAgent(agentsData[0]);
+          }
+        } catch(err) {
+          setError(err.message);
+        } finally {
+          setLoading(false)
+        }
+      }
+
+      fetchInitialData();
+    }
+  , []);
+
   return(
     <div className="min-h-screen bg-val-bg text-val-text font-sans flex flex-col selection:bg-val-red selection:text-white relative overflow-x-hidden">
       
