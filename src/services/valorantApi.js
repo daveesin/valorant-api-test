@@ -1,8 +1,8 @@
-const BASE_URL = 'https://valorant-api.com/';
+const BASE_URL = 'https://valorant-api.com/v1';
 
 export async function getAgents() {
 
-    const response = await fetch(`${BASE_URL}/agents?isPlayableCharacter=true&language=pt-BR`);
+    const response = await fetch(`${BASE_URL}/agents?isPlayableCharacter=true&language=en-US`);
 
     if(!response.ok) {
         throw new Error('Fail searching Valorant-API agents.');
