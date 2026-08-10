@@ -1,16 +1,35 @@
-# React + Vite
+# 🛠️ VAL//HUB (valorant-api-test)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> ⚠️ **Project under active development!** 
 
-Currently, two official plugins are available:
+A web application built with a strong focus on user experience to explore the Valorant universe — including agents, abilities, weapon arsenals, and tactics — by consuming real-time data from the official [Valorant-API](https://valorant-api.com/).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 📌 Overview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**VAL//HUB** is being developed as a tactical command center. The goal is to build a fluid, responsive interface with a distinct eSports visual identity, practicing core front-end concepts such as REST API consumption, dynamic media handling (audio clips and skill videos), and component architecture using **React** and **Tailwind CSS v4**.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚧 Feature Roadmap & Status
+
+- [x] Initial project setup (Vite + React + Tailwind CSS v4)
+- [x] Visual identity and theme definition (`@theme` variables)
+- [ ] Main Hub / Landing Page construction
+- [ ] Integration with the **Agents** endpoint (list and role filtering)
+- [ ] Agent details modal with voice lines and skill preview videos
+- [ ] Integration with the **Weapons** endpoint and comparison tool
+- [ ] **React Router** implementation for page navigation
+- [ ] Deployment on Vercel
+
+---
+
+## 🛠️ Tech Stack
+
+- **[React](https://react.dev/)**
+- **[Vite](https://vitejs.dev/)**
+- **[Tailwind CSS v4](https://tailwindcss.com/)**
+- **[Valorant-API](https://valorant-api.com/)**
+
+---
