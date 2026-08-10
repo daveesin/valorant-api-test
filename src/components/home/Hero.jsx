@@ -18,10 +18,10 @@ function Hero() {
       </p>
 
       <div className="flex flex-wrap gap-4 pt-4">
-        <button className="bg-val-red text-white font-black uppercase text-sm tracking-widest px-8 py-4 hover:bg-val-text hover:text-val-bg transition-all duration-300 shadow-[4px_4px_0px_0px_#00F5FF]">
+        <button className="bg-val-red text-white font-black uppercase text-sm tracking-widest px-8 py-4 hover:bg-val-text hover:text-val-bg transition-all duration-300 shadow-[4px_4px_0px_0px_#00F5FF] cursor-pointer">
           EXPLORE AGENTS
         </button>
-        <button className="border border-val-muted/40 text-val-text font-bold uppercase text-sm tracking-widest px-8 py-4 hover:border-val-red hover:text-val-red transition-all duration-300">
+        <button className="border border-val-muted/40 text-val-text font-bold uppercase text-sm tracking-widest px-8 py-4 hover:border-val-red hover:text-val-red transition-all duration-300 cursor-pointer">
           SEE ARSENAL
         </button>
       </div>
