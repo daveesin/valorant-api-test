@@ -6,11 +6,14 @@ import Hero from '../components/home/Hero';
 import FeaturedAgentCard from '../components/home/FeaturedAgentCard';
 
 export default function Home() {
+  
+  //Create states to controll dynamic content:
   const [agents, setAgents] = useState([]);
   const [featuredAgent, setFeaturedAgent] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  //useEffect hook to load api data on the component render:
   useEffect(() => {
     async function fetchInitialData() {
       try {
@@ -31,6 +34,21 @@ export default function Home() {
     fetchInitialData();
   }, []);
 
+  //Define functions to handle the buttons on the featured agent card:
+  function handleNextFeaturedAgent() {
+    if (!featuredAgent || agents.length === 0) return;
+    const actualIndex = agents.findIndex(a => a.uuid === featuredAgent.uuid);
+    const nextIndex = (actualIndex + 1) % agents.length;
+    setFeaturedAgent(agents[nextIndex]);
+  }
+
+  function handlePrevFeaturedAgent() {
+    if (!featuredAgent || agents.length === 0) return;
+    const actualIndex = agents.findIndex(a => a.uuid === featuredAgent.uuid);
+    const nextIndex = (actualIndex - 1 + agents.length) % agents.length;
+    setFeaturedAgent(agents[nextIndex]);
+  }
+
   return (
     <div className="min-h-screen bg-val-bg text-val-text font-sans flex flex-col selection:bg-val-red selection:text-white relative overflow-x-hidden">
       <div className="h-1 bg-val-red w-full" />
@@ -44,6 +62,8 @@ export default function Home() {
             agent={featuredAgent} 
             loading={loading} 
             error={error} 
+            onNext={handleNextFeaturedAgent}
+            onPrev={handlePrevFeaturedAgent}
           />
         </div>
       </main>
