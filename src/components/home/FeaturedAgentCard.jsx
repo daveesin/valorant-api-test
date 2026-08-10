@@ -1,4 +1,6 @@
-function FeaturedAgentCard({ agent, loading, error }) {
+import { ChevronRightIcon, ChevronLeftIcon } from 'lucide-react';
+
+function FeaturedAgentCard({ agent, loading, error, onNext, onPrev }) {
   return (
     <div className="lg:col-span-5 relative">
       <div className="absolute -inset-1 bg-gradient-to-r from-val-red to-val-cyan opacity-20 blur-xl" />
@@ -38,10 +40,18 @@ function FeaturedAgentCard({ agent, loading, error }) {
             </div>
 
             <div className="h-80 bg-val-bg/80 flex items-center justify-center relative overflow-hidden my-4 border border-val-muted/10">
+              <ChevronLeftIcon 
+                onClick={onPrev}
+                className="cursor-pointer hover:text-val-red transition-colors"
+              />
               <img 
                 src={agent.fullPortrait || agent.displayIcon} 
                 alt={agent.displayName}
                 className="h-full object-contain drop-shadow-[0_0_15px_rgba(255,70,85,0.4)]"
+              />
+              <ChevronRightIcon 
+                onClick={onNext}
+                className="cursor-pointer hover:text-val-red transition-colors"
               />
             </div>
 
