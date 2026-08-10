@@ -3,7 +3,7 @@ import { ChevronRightIcon, ChevronLeftIcon } from 'lucide-react';
 function FeaturedAgentCard({ agent, loading, error, onNext, onPrev }) {
   return (
     <div className="lg:col-span-5 relative">
-      <div className="absolute -inset-1 bg-gradient-to-r from-val-red to-val-cyan opacity-20 blur-xl" />
+      <div className="absolute -inset-1 bg-linear-to-r from-val-red to-val-cyan opacity-20 blur-xl" />
 
       <div className="relative bg-val-surface border border-val-surface p-6 sm:p-8 space-y-6">
         
