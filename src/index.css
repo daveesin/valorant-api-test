@@ -1,1 +1,10 @@
 @import "tailwindcss";
+
+@theme {
+  --color-val-bg: #0F1922;
+  --color-val-surface: #182531;
+  --color-val-red: #FF4655;
+  --color-val-cyan: #00F5FF;
+  --color-val-text: #ECE8E1;
+  --color-val-muted: #768089;
+}
