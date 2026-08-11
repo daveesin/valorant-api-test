@@ -33,13 +33,21 @@ function Agents() {
         <div className="w-full min-h-screen flex flex-col justify-between bg-val-bg text-val-text font-sans p-4 md:p-8">
             <Navbar />
             <main className="w-full flex-1 my-6">
-                <div className="w-full">
-                    <AgentSelector
-                        agents={agents}
-                        selectedAgent={selectedAgent}
-                        onSelectAgent={setSelectedAgent}
-                    />
-                </div>
+                {error ? (
+                    <div className="p-4 bg-val-red/10 border border-val-red font-mono text-xs text-val-red text-center my-auto">
+                        [ERROR]: {error}
+                    </div>
+                ) : (
+                    <>
+                    <div className="w-full">
+                        <AgentSelector
+                            agents={agents}
+                            selectedAgent={selectedAgent}
+                            onSelectAgent={setSelectedAgent}
+                        />
+                    </div>
+                    </>
+                )}
             </main>
             <Footer />
         </div>
