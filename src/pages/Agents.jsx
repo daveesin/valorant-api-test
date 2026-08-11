@@ -31,6 +31,7 @@ function Agents() {
 
     return (
         <div className="w-full min-h-screen flex flex-col justify-between bg-val-bg text-val-text font-sans p-4 md:p-8">
+            <div className="h-1 bg-val-red w-full" />
             <Navbar />
             <main className="w-full flex-1 my-6">
                 {error ? (
