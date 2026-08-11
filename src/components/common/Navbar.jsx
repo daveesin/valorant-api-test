@@ -17,9 +17,9 @@ function Navbar() {
           <a href="#agentes" className="p-3 hover:bg-val-red text-white transition-colors flex items-center gap-1">
             <span>AGENTS</span>
           </a>
-          <a href="#armas" className="p-3 hover:bg-val-red text-white transition-colors flex items-center gap-1">
-            <span>ARSENAL</span>
-          </a>
+          <Link to='/arsenal' className="p-3 hover:bg-val-red text-white transition-colors flex items-center gap-1">
+            ARSENAL
+          </Link>
           <Link to='/maps' className="p-3 hover:bg-val-red text-white transition-colors flex items-center gap-1">
             MAPS
           </Link>
