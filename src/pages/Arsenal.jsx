@@ -1,6 +1,7 @@
 import Navbar from "../components/common/Navbar";
 import Footer from "../components/common/Footer";
 import WeaponSelector from "../components/arsenal/WeaponSelector";
+import WeaponDisplay from "../components/arsenal/WeaponDisplay";
 import { getWeapons } from "../services/valorantApi";
 import { useEffect, useState } from "react";
 
@@ -64,7 +65,7 @@ function Arsenal() {
                         onSelectWeapon={setSelectedWeapon}
                     />
 
-                    {/*Here comes the next component*/}
+                    <WeaponDisplay selectedWeapon={selectedWeapon} />
 
                     </>
                 )}
