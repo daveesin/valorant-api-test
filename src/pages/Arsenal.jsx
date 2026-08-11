@@ -51,11 +51,23 @@ function Arsenal() {
             <Navbar />
 
             <main className="flex-1 flex flex-col md:flex-row w-full">
-                <WeaponSelector
-                    weapons={weapons}
-                    selectedWeapon={selectedWeapon}
-                    onSelectWeapon={setSelectedWeapon}
-                />
+                {error ? (
+                    <div className="p-4 bg-val-red/10 border border-val-red font-mono text-xs text-val-red text-center my-auto">
+                        [ERROR]: {error}
+                    </div>
+                ) : (
+                    <>
+
+                    <WeaponSelector
+                        weapons={weapons}
+                        selectedWeapon={selectedWeapon}
+                        onSelectWeapon={setSelectedWeapon}
+                    />
+
+                    {/*Here comes the next component*/}
+
+                    </>
+                )}
             </main>
 
             <Footer />
