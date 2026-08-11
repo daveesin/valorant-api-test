@@ -7,9 +7,9 @@ function Navbar() {
         <div className="flex items-center gap-3 group cursor-pointer">
           <div className="w-5 h-5 bg-val-red rotate-45 transition-transform duration-300 group-hover:rotate-180" />
           <div className="flex flex-col">
-            <span className="font-black text-xl tracking-widest uppercase leading-none">
+            <Link to="/" className="font-black text-xl tracking-widest uppercase leading-none">
               VAL<span className="text-val-red">//</span>HUB
-            </span>
+            </Link>
           </div>
         </div>
 
