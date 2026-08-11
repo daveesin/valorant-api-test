@@ -40,7 +40,7 @@ function WeaponSelector( {weapons, selectedWeapon, onSelectWeapon} ) {
                     <div className="flex flex-col">
                     <span className="text-xs font-bold uppercase tracking-wider font-mono">{weapon.displayName}</span>
                     <span className="text-[9px] font-mono text-gray-500 uppercase">
-                        {weapon.category?.replace('EWeaponCategory::', '')}
+                        {weapon.category?.replace('EEquippableCategory::', '')}
                     </span>
                     </div>
                     <img
