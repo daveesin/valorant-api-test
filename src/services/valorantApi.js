@@ -21,3 +21,14 @@ export async function getMaps() {
     const data = await response.json();
     return data.data;
 }
+
+export async function getWeapons() {
+
+    const response = await fetch(`${BASE_URL}/weapons`);
+    if(!response.ok) {
+        throw new Error('Fail loading Valorant-API weapons.');
+    }
+
+    const data = await response.json();
+    return data.data;
+}
