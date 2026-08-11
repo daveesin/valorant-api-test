@@ -2,7 +2,7 @@ function Hero() {
   return (
     <div className="lg:col-span-7 space-y-6">
       <div className="inline-flex items-center gap-2 px-3 py-1 bg-val-surface border-l-2 border-val-cyan text-val-cyan text-xs font-mono tracking-widest uppercase">
-        <span>TACTICAL INTELLIGENCE CENTER</span>
+        <span>VALORANT INFO CENTER</span>
       </div>
 
       <h1 className="text-6xl sm:text-7xl lg:text-8xl font-black uppercase tracking-tighter leading-none">
@@ -14,7 +14,7 @@ function Hero() {
 
       <p className="text-val-muted text-base sm:text-lg max-w-xl font-normal leading-relaxed">
         Explore detailed information about agents, skills, weapons and radar in
-        real time. Use this platform and improve your game level.
+        real time. Use this platform to info yourself and improve your game level.
       </p>
 
       <div className="flex flex-wrap gap-4 pt-4">
