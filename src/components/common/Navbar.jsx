@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 function Navbar() {
   return (
     <header className="border-b border-val-surface bg-val-bg/90 backdrop-blur-md sticky top-0 z-50">
@@ -18,9 +20,9 @@ function Navbar() {
           <a href="#armas" className="p-3 hover:bg-val-red text-white transition-colors flex items-center gap-1">
             <span>ARSENAL</span>
           </a>
-          <a href="#mapas" className="p-3 hover:bg-val-red text-white transition-colors flex items-center gap-1">
-            <span>MAPS</span>
-          </a>
+          <Link to='/maps' className="p-3 hover:bg-val-red text-white transition-colors flex items-center gap-1">
+            MAPS
+          </Link>
         </nav>
       </div>
     </header>
