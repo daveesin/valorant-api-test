@@ -30,17 +30,17 @@ function Agents() {
     }, []);
 
     return (
-        <div className="w-full min-h-screen flex flex-col justify-between bg-val-bg text-val-text font-sans ">
+        <div className="w-full min-h-screen flex flex-col justify-between bg-val-bg text-val-text font-sans p-4 md:p-8">
             <Navbar />
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                <div className="lg:col-span-4 order-2 lg:order-1">
+            <main className="w-full flex-1 my-6">
+                <div className="w-full">
                     <AgentSelector
                         agents={agents}
                         selectedAgent={selectedAgent}
                         onSelectAgent={setSelectedAgent}
                     />
                 </div>
-            </div>
+            </main>
             <Footer />
         </div>
     );
