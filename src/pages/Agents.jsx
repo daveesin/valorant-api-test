@@ -1,8 +1,48 @@
-function Agents() {
-    return(
-        
-        <h1>Agents</h1>
+import { getAgents} from "../services/valorantApi";
+import Navbar from "../components/common/Navbar";
+import Footer from "../components/common/Footer";
+import AgentSelector from "../components/agents/AgentSelector";
+import { useEffect, useState } from "react";
 
+function Agents() {
+
+    const [agents, setAgents] = useState([]);
+    const [selectedAgent, setSelectedAgent] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        async function fetchAgents(){
+            try{
+                setLoading(true);
+                const newAgents = await getAgents();
+
+                setAgents(newAgents);
+            } catch(err){
+                setError(err.message);
+            } finally {
+                setLoading(false);
+            }
+        }
+        
+        fetchAgents();
+
+    }, []);
+
+    return (
+        <div className="w-full min-h-screen flex flex-col justify-between bg-val-bg text-val-text font-sans ">
+            <Navbar />
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                <div className="lg:col-span-4 order-2 lg:order-1">
+                    <AgentSelector
+                        agents={agents}
+                        selectedAgent={selectedAgent}
+                        onSelectAgent={setSelectedAgent}
+                    />
+                </div>
+            </div>
+            <Footer />
+        </div>
     );
 }
 
