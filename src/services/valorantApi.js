@@ -11,3 +11,15 @@ export async function getAgents() {
     const data = await response.json();
     return data.data;
 }
+
+export async function getMaps() {
+
+    const response = await fetch(`${BASE_URL}/maps`);
+
+    if(!response.ok) {
+        throw new Error('Fail loading Valorant-API maps.');
+    }
+
+    const data = await response.json();
+    return data.data;
+}
