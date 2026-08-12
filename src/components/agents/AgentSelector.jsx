@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-function AgentSelector({ agents, selectedAgent, onSelectAgent }) {
+function AgentSelector({ agents }) {
 
     const [searchTerm, setSearchTerm] = useState("");
+    const navigate = useNavigate();
 
     const filteredAgents = agents.filter((a) => a.displayName.toLowerCase().includes(searchTerm.toLowerCase()));
 
@@ -23,18 +25,13 @@ function AgentSelector({ agents, selectedAgent, onSelectAgent }) {
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 max-h-[calc(100vh-220px)] overflow-y-auto pr-1 custom-scrollbar">
                 {filteredAgents.length > 0 ? (
                     filteredAgents.map((agent) => {
-                        const isSelected = selectedAgent?.uuid === agent.uuid;
                         const agentImage = agent.bustPortrait || agent.displayIcon || agent.fullPortraitV2;
 
                         return (
                         <button
                             key={agent.uuid}
-                            onClick={() => onSelectAgent(agent)}
-                            className={`relative h-44 sm:h-52 overflow-hidden border text-left transition-all duration-200 group cursor-pointer bg-[#0f1923] ${
-                                isSelected
-                                    ? "border-val-red ring-1 ring-val-red shadow-[0_0_15px_rgba(255,70,85,0.3)]"
-                                    : "border-[#1f2f3d] hover:border-gray-400/50 opacity-85 hover:opacity-100"
-                            }`}
+                            onClick={() => navigate(`/agents/${agent.uuid}`)}
+                            className="relative h-44 sm:h-52 overflow-hidden border text-left transition-all duration-200 group cursor-pointer bg-[#0f1923] border-[#1f2f3d] hover:border-gray-400/50 opacity-85 hover:opacity-100"
                         >
                             {/* Role Icon Fade */}
                             {agent.role?.displayIcon && (
@@ -54,16 +51,12 @@ function AgentSelector({ agents, selectedAgent, onSelectAgent }) {
                             
                             {/* Overlay de Gradiente Tático */}
                             <div
-                            className={`absolute inset-0 bg-linear-to-t from-[#0f1923] via-[#0f1923]/40 to-transparent transition-opacity duration-300 z-10 ${
-                                isSelected ? "from-[#0f1923] via-[#0f1923]/30" : "group-hover:opacity-80"
-                            }`}
+                            className="absolute inset-0 bg-linear-to-t from-[#0f1923] via-[#0f1923]/40 to-transparent transition-opacity duration-300 z-10"
                             />
 
                             {/* Borda decorativa/corte no canto superior (Aesthetic Valorant) */}
                             <div
-                            className={`absolute top-0 left-0 w-2 h-2 border-t border-l ${
-                                isSelected ? "border-val-red" : "border-gray-500/40"
-                            }`}
+                            className="absolute top-0 left-0 w-2 h-2 border-t border-l"
                             />
 
                             {/* Info no rodapé do Card */}
@@ -74,16 +67,10 @@ function AgentSelector({ agents, selectedAgent, onSelectAgent }) {
                             
                                 <div className="flex justify-between items-center">
                                     <span
-                                        className={`font-black uppercase tracking-wider text-sm sm:text-base font-mono ${
-                                            isSelected ? "text-val-red" : "text-white"
-                                        }`}
+                                        className="font-black uppercase tracking-wider text-sm sm:text-base font-mono"
                                     >
                                         {agent.displayName}
                                     </span>
-
-                                {isSelected && (
-                                    <span className="w-2 h-2 bg-val-red rounded-full animate-pulse shadow-[0_0_8px_#ff4655]" />
-                                )}
                                 </div>
                             </div>
                         </button>

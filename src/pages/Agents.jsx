@@ -7,7 +7,6 @@ import { useEffect, useState } from "react";
 function Agents() {
 
     const [agents, setAgents] = useState([]);
-    const [selectedAgent, setSelectedAgent] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
@@ -43,8 +42,6 @@ function Agents() {
                     <div className="w-full">
                         <AgentSelector
                             agents={agents}
-                            selectedAgent={selectedAgent}
-                            onSelectAgent={setSelectedAgent}
                         />
                     </div>
                     </>
