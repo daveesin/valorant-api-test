@@ -1,0 +1,44 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="valGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF4655"/>
+      <stop offset="100%" stop-color="#FF6B78"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <circle cx="256" cy="256" r="220" fill="#0F1923"/>
+
+  <!-- Hub Ring -->
+  <circle cx="256" cy="256" r="170"
+          fill="none"
+          stroke="#1F2937"
+          stroke-width="12"/>
+
+  <!-- Connection Nodes -->
+  <circle cx="256" cy="86" r="14" fill="url(#valGradient)"/>
+  <circle cx="426" cy="256" r="14" fill="url(#valGradient)"/>
+  <circle cx="256" cy="426" r="14" fill="url(#valGradient)"/>
+  <circle cx="86" cy="256" r="14" fill="url(#valGradient)"/>
+
+  <!-- Connection Lines -->
+  <line x1="256" y1="86" x2="256" y2="170"
+        stroke="#374151" stroke-width="8"/>
+  <line x1="426" y1="256" x2="342" y2="256"
+        stroke="#374151" stroke-width="8"/>
+  <line x1="256" y1="426" x2="256" y2="342"
+        stroke="#374151" stroke-width="8"/>
+  <line x1="86" y1="256" x2="170" y2="256"
+        stroke="#374151" stroke-width="8"/>
+
+  <!-- Stylized V -->
+  <path d="M170 150
+           L245 340
+           L275 340
+           L342 150
+           L295 150
+           L260 260
+           L217 150 Z"
+        fill="url(#valGradient)"/>
+
+</svg>
