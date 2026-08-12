@@ -1,4 +1,9 @@
+import { useNavigate } from "react-router-dom";
+
 function Hero() {
+
+  const navigate = useNavigate();
+
   return (
     <div className="lg:col-span-7 space-y-6">
       <div className="inline-flex items-center gap-2 px-3 py-1 bg-val-surface border-l-2 border-val-cyan text-val-cyan text-xs font-mono tracking-widest uppercase">
@@ -18,10 +23,16 @@ function Hero() {
       </p>
 
       <div className="flex flex-wrap gap-4 pt-4">
-        <button className="bg-val-red text-white font-black uppercase text-sm tracking-widest px-8 py-4 hover:bg-val-text hover:text-val-bg transition-all duration-300 shadow-[4px_4px_0px_0px_#00F5FF] cursor-pointer">
+        <button 
+        className="bg-val-red text-white font-black uppercase text-sm tracking-widest px-8 py-4 hover:bg-val-text hover:text-val-bg transition-all duration-300 shadow-[4px_4px_0px_0px_#00F5FF] cursor-pointer"
+        onClick={() => navigate('/agents')}
+        >
           EXPLORE AGENTS
         </button>
-        <button className="border border-val-muted/40 text-val-text font-bold uppercase text-sm tracking-widest px-8 py-4 hover:border-val-red hover:text-val-red transition-all duration-300 cursor-pointer">
+        <button 
+        className="border border-val-muted/40 text-val-text font-bold uppercase text-sm tracking-widest px-8 py-4 hover:border-val-red hover:text-val-red transition-all duration-300 cursor-pointer"
+        onClick={() => navigate('/arsenal')}
+        >
           SEE ARSENAL
         </button>
       </div>
