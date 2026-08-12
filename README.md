@@ -1,6 +1,6 @@
 # 🛠️ VAL//HUB (valorant-api-test)
 
-> ⚠️ **Project under active development!** 
+> ⚠️ **Project Status: Done but evolving!**
 
 A web application built with a strong focus on user experience to explore the Valorant universe — including agents, abilities, weapon arsenals, and tactics — by consuming real-time data from the official [Valorant-API](https://valorant-api.com/).
 
@@ -21,8 +21,8 @@ A web application built with a strong focus on user experience to explore the Va
 - [x] **React Router** implementation for page navigation
 - [x] Integration with the **Maps** endpoint and page to see map radar structure
 - [x] Integration with the **Weapons** endpoint and page to see weapons details
-- [ ] Agent details page on agent card click
-- [ ] Deployment on Vercel
+- [x] Agent details page on agent card click
+- [x] Deployment on Vercel
 
 ---
 
