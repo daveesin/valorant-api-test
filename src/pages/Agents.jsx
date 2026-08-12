@@ -7,7 +7,6 @@ import { useEffect, useState } from "react";
 function Agents() {
 
     const [agents, setAgents] = useState([]);
-    const [selectedAgent, setSelectedAgent] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
@@ -29,6 +28,15 @@ function Agents() {
 
     }, []);
 
+    if (loading) {
+        return (
+            <div className="min-h-screen bg-[#0f1923] text-white flex flex-col items-center justify-center font-mono gap-3">
+                <div className="w-12 h-12 border-4 border-val-red border-t-transparent rounded-full animate-spin" />
+                <h1 className="text-val-red tracking-widest text-sm animate-pulse">// INITIALIZING TACTICAL DATA...</h1>
+            </div>
+        );
+    }
+
     return (
         <div className="w-full min-h-screen flex flex-col justify-between bg-val-bg text-val-text font-sans p-4 md:p-8">
             <div className="h-1 bg-val-red w-full" />
@@ -43,8 +51,6 @@ function Agents() {
                     <div className="w-full">
                         <AgentSelector
                             agents={agents}
-                            selectedAgent={selectedAgent}
-                            onSelectAgent={setSelectedAgent}
                         />
                     </div>
                     </>
