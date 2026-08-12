@@ -49,6 +49,7 @@ function Arsenal() {
     return (
 
         <div className="w-full min-h-screen bg-[#0f1923] text-[#f9f9f9] font-sans flex flex-col justify-between border border-[#1f2326]">
+            <div className="h-1 bg-val-red w-full" />
             <Navbar />
 
             <main className="flex-1 flex flex-col md:flex-row w-full">

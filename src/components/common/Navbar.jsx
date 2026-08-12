@@ -14,9 +14,9 @@ function Navbar() {
         </div>
 
         <nav className="hidden md:flex gap-8 text-xs font-mono uppercase tracking-widest text-val-muted">
-          <a href="#agentes" className="p-3 hover:bg-val-red text-white transition-colors flex items-center gap-1">
-            <span>AGENTS</span>
-          </a>
+          <Link to='/agents' className="p-3 hover:bg-val-red text-white transition-colors flex items-center gap-1">
+            AGENTS
+          </Link>
           <Link to='/arsenal' className="p-3 hover:bg-val-red text-white transition-colors flex items-center gap-1">
             ARSENAL
           </Link>
