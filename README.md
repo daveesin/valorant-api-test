@@ -16,11 +16,12 @@ A web application built with a strong focus on user experience to explore the Va
 
 - [x] Initial project setup (Vite + React + Tailwind CSS v4)
 - [x] Visual identity and theme definition (`@theme` variables)
-- [ ] Main Hub / Landing Page construction
-- [ ] Integration with the **Agents** endpoint (list and role filtering)
-- [ ] Agent details modal with voice lines and skill preview videos
-- [ ] Integration with the **Weapons** endpoint and comparison tool
-- [ ] **React Router** implementation for page navigation
+- [x] Main Hub / Landing Page construction
+- [x] Integration with the **Agents** endpoint in home page
+- [x] **React Router** implementation for page navigation
+- [x] Integration with the **Maps** endpoint and page to see map radar structure
+- [x] Integration with the **Weapons** endpoint and page to see weapons details
+- [ ] Agent details page on agent card click
 - [ ] Deployment on Vercel
 
 ---
